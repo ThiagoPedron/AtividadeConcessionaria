@@ -25,4 +25,12 @@ public partial class Alocacao
             return areas;
         }
     }
+    public static List<Alocacao> getAll()
+    {
+        using (var context = new BancoAtividadeContext())
+        {
+            var areas = context.Alocacaos.ToList();
+            return areas;
+        }
+    }
 }

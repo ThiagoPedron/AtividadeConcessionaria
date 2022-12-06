@@ -20,8 +20,16 @@ namespace api.Controllers
 
 
         [HttpGet]
+        [Route("alocacao/getAll")]
+        public List<Alocacao> getAll()
+        {
+            var all = Alocacao.getAll();
+            return all;
+        }
+
+        [HttpGet]
         [Route("alocacao/id")]
-        public List<Alocacao> getAll(int id)
+        public List<Alocacao> GetAlocacao(int id)
         {
             var all = Alocacao.getAreas(id);
             return all;

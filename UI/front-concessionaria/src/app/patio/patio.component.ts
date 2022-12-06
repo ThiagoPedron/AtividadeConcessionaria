@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Alocacao } from '../interfaces/alocacoes';
 import axios from 'axios';
 import { Automoveis } from '../interfaces/automoveis';
+import { Area } from '../interfaces/areas';
 @Component({
   selector: 'app-patio',
   templateUrl: './patio.component.html',
@@ -10,11 +11,12 @@ import { Automoveis } from '../interfaces/automoveis';
 export class PatioComponent implements OnInit {
 
   areaId: number = 0
+  lista_areas : Array<Area> = []
   lista_locacao: Array<Alocacao> = []
   lista_automoveis: Array<Automoveis> = []
   automovel_venda: Automoveis | any
   constructor() {
-   this.teste();
+   this.getAllAreas();
   }
 
   ngOnInit(): void {
@@ -26,37 +28,19 @@ export class PatioComponent implements OnInit {
     this.areaId = id
 
   }
-  // getAutomoveis() {
-  //   var axios = require('axios');
-
-  //   var config = {
-  //     method: 'get',
-  //     url: 'http://localhost:5224/Cliente/teste',
-  //     headers: {}
-  //   };
-
-  //   axios(config)
-  //     .then(function (response:any) {
-  //       if (typeof(response)!= undefined) 
-  //         console.log(JSON.stringify(response));
-  //     })
-  //     .catch(function (error:any) {
-  //       if (typeof(error)!= undefined) 
-  //       console.log(error);
-  //     });
-
-
-  // }
-
-  teste() {
+  getAllAreas() {
     var config = {
       method: 'get',
-      url: 'http://localhost:7240/setor/all',
+      url: 'http://localhost:5224/Alocacao/alocacao/getAll',
       headers: {},
     };
     let instance = this;
-    axios(config).then(function (response: any) {
+    axios(config).then(function (response) {
       console.log(response.data);
+      instance.lista_locacao = response.data;
+      instance.lista_locacao.forEach(locacao => {
+        
+      });
     });
   }
 }
