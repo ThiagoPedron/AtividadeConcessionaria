@@ -33,4 +33,11 @@ public partial class Alocacao
             return areas;
         }
     }
+
+    // public static string venda(){
+    //     using (var context = new BancoAtividadeContext()){
+    //         var venda = context.Alocacaos
+    //     }
+    // }
+
 }

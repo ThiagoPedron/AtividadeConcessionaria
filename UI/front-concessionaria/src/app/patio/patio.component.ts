@@ -35,7 +35,7 @@ export class PatioComponent implements OnInit {
       headers: {},
     };
     let instance = this;
-    axios(config).then(function (response) {
+    axios(config).then(function (response:any) {
       console.log(response.data);
       instance.lista_locacao = response.data;
       instance.lista_locacao.forEach(locacao => {

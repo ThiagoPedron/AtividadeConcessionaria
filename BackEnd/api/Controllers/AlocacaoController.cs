@@ -34,6 +34,14 @@ namespace api.Controllers
             var all = Alocacao.getAreas(id);
             return all;
         }
+
+        // [HttpPost]
+        // [Route("alocacao/venda")]
+        // public string Venda(int id)
+        // {
+        //     var all = Alocacao.venda(id);
+        //     return all;
+        // }
        
     }
 }
