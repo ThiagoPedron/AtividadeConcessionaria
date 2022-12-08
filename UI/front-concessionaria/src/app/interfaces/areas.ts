@@ -1,4 +1,4 @@
 export interface Area{
-    area:number,
+    id:number,
     quantidade:number
 }
