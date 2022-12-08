@@ -1,17 +1,11 @@
-<div class="main">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="chama_venda(1)">1</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="chama_venda(2)">2</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="chama_venda(3)">3</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="chama_venda(4)">4</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="chama_venda(5)">5</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="chama_venda(6)">6</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="chama_venda(7)">7</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="chama_venda(8)">8</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="chama_venda(9)">9</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="chama_venda(10)">10</button>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"(click)="chama_venda(11)">11</button>
-</div>
+<div class="main" *ngFor="let area of lista_areas">
+    <!-- <button *ngFor="let area of lista_areas" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="chama_venda(area.id)" > 
+      {{area.id}}   
+    </button> -->
 
+    <p>{{area.id}}a</p>
+</div>
+<!-- *ngFor="let area of lista_areas" class="area" data-bs-toggle="modal" data-bs-target="#exampleModal"  (click)="chama_venda(area.id)" -->
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
