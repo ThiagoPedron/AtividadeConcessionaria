@@ -10,6 +10,40 @@ import { Area } from '../interfaces/areas';
 })
 export class PatioComponent implements OnInit {
 
+  teste  = [
+    {
+      name: 'Nishant',
+      age: 25
+    },
+    {
+      name: 'Shailesh',
+      age: 45
+    },
+    {
+      name: 'Abhishek',
+      age: 36
+    },
+    {
+      name: 'Akshay',
+      age: 65
+    },
+    {
+      name: 'Ashish',
+      age: 12
+    },
+    {
+      name: 'Uday',
+      age: 31
+    },
+    {
+      name: 'Mayank',
+      age: 45
+    },
+    {
+      name: 'Raju',
+      age: 74
+    },
+  ]
   areaId: number = 0
   lista_areas : Array<Area> = []
   lista_locacao: Array<Alocacao> = []
@@ -17,10 +51,11 @@ export class PatioComponent implements OnInit {
   automovel_venda: Automoveis | any
   constructor() {
    this.getAllAreas();
+   
   }
 
   ngOnInit(): void {
-
+    console.log(this.teste)
   }
 
 
@@ -29,18 +64,18 @@ export class PatioComponent implements OnInit {
 
   }
   getAllAreas() {
-    var config = {
-      method: 'get',
-      url: 'http://localhost:5224/Alocacao/alocacao/getAll',
-      headers: {},
-    };
-    let instance = this;
-    axios(config).then(function (response:any) {
-      console.log(response.data);
-      instance.lista_locacao = response.data;
-      instance.lista_locacao.forEach(locacao => {
+    // var config = {
+    //   method: 'get',
+    //   url: 'http://localhost:5224/Alocacao/alocacao/getAll',
+    //   headers: {},
+    // };
+    // let instance = this;
+    // axios(config).then(function (response:any) {
+    //   console.log(response.data);
+    //   instance.lista_locacao = response.data;
+    //   instance.lista_locacao.forEach(locacao => {
         
-      });
-    });
+    //   });
+    // });
   }
 }
