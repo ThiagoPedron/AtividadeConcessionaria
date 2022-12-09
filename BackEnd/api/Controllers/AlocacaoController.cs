@@ -35,13 +35,13 @@ namespace api.Controllers
             return all;
         }
 
-        // [HttpPost]
-        // [Route("alocacao/venda")]
-        // public string Venda(int id)
-        // {
-        //     var all = Alocacao.venda(id);
-        //     return all;
-        // }
+        [HttpGet]
+        [Route("alocacao/vendaId")]
+        public string Venda(int id)
+        {
+            var result = Alocacao.venda(id);
+            return result;
+        }
        
     }
 }

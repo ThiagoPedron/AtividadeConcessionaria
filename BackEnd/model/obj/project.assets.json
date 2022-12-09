@@ -3424,19 +3424,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno\\.nuget\\packages\\": {}
+    "C:\\Users\\thiag\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\Desktop\\AtividadeConcessionaria\\BackEnd\\model\\model.csproj",
+      "projectUniqueName": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Repositorios\\AtividadeConcessionaria\\BackEnd\\model\\model.csproj",
       "projectName": "model",
-      "projectPath": "C:\\Users\\Aluno\\Desktop\\AtividadeConcessionaria\\BackEnd\\model\\model.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\Desktop\\AtividadeConcessionaria\\BackEnd\\model\\obj\\",
+      "projectPath": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Repositorios\\AtividadeConcessionaria\\BackEnd\\model\\model.csproj",
+      "packagesPath": "C:\\Users\\thiag\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\Repositorios\\AtividadeConcessionaria\\BackEnd\\model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\thiag\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3444,7 +3444,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

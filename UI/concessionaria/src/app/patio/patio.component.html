@@ -1,1 +1,72 @@
-<p *ngFor="let a of teste">{{a}}</p>
+<div class="main">
+  <div *ngFor="let area of lista_areas">
+    <button type="button" *ngIf="area.quantidade > 0" class="btn btn-primary area" data-bs-toggle="modal"
+      data-bs-target="#exampleModal" (click)="chama_venda(area.id)">
+      {{ area.id }}
+    </button>
+    <button type="button" *ngIf="area.quantidade <= 0" disabled class="btn btn-secondary area" data-bs-toggle="modal"
+      data-bs-target="#exampleModal" (click)="chama_venda(area.id)">
+      {{ area.id }}
+    </button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Area {{ areaId }}
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex justify-content-between" *ngFor="let automovel of lista_automoveis;">
+          <p>Modelo : {{ automovel.modelo }}</p>
+          <p>Preço : {{ automovel.preO }}</p>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalVenda"
+            (click)="selecionaVenda(automovel.id)">
+            Vender
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModalVenda" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          {{ automovel_venda.modelo }}
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex justify-content-between">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Selecione o Cliente</option>
+            <option value="{{ cliente.id }}" *ngFor="let cliente of lista_clientes">
+              {{ cliente.nome }}
+            </option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-between">
+          <select class="form-select" id="concessionaria" aria-label="Default select example">
+            <option selected>Selecione a Concessionaria</option>
+            <option value="{{ con.id }}" *ngFor="let con of lista_concessionaria" > {{ con.nome }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="button" class="btn btn-primary" (click)="finalizaVenda()">Vender</button>
+      </div>
+    </div>
+  </div>
+</div>

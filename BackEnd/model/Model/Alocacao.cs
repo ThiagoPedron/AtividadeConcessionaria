@@ -1,5 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+
+
+using System.Collections.Generic;
+
+using System.Threading.Tasks;
+
+using System.Security.Claims;
+using System.Text;
 
 namespace model.Model;
 
@@ -34,10 +43,16 @@ public partial class Alocacao
         }
     }
 
-    // public static string venda(){
-    //     using (var context = new BancoAtividadeContext()){
-    //         var venda = context.Alocacaos
-    //     }
-    // }
+    public static string venda(int idLocacao)
+    {
+        using (var context = new BancoAtividadeContext())
+        { 
+                Alocacao alocacao = context.Alocacaos.FirstOrDefault(a => a.Id == idLocacao);
+                alocacao.Quantidade -= 1;
+                context.SaveChanges();
+                return "vendido";
+        }
+
+    }
 
 }

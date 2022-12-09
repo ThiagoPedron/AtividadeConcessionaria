@@ -1,0 +1,16 @@
+.main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    gap: 1em;
+    padding: 10px;
+}
+.area{
+    height: 5em;
+    width: 100%;
+}
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
